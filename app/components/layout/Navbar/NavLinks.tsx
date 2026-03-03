@@ -23,6 +23,7 @@ export default function NavLinks({ isMobile, onClick }: Props) {
   const links = [
     { label: "Features", id: "features" },
     { label: "How It Works", id: "howItWorks" },
+    { label: "Testimonials", id: "testimonials" },
     { label: "Download", id: "download" },
   ];
 
