@@ -1,9 +1,11 @@
 import DownloadSection from "./components/sections/DownloadSection";
 import FeaturesSection from "./components/sections/Features/FeaturesSection";
+import Hero from "./components/sections/Hero";
 
 export default function Home() {
   return (
     <>
+      <Hero />
       <FeaturesSection />
       <DownloadSection />
     </>

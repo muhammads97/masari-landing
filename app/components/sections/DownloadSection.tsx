@@ -1,4 +1,5 @@
 import { Download, Clock } from "lucide-react";
+import Button from "../ui/Button";
 
 export default function DownloadSection() {
   return (
@@ -18,16 +19,14 @@ export default function DownloadSection() {
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row justify-center gap-4 mb-6 w-full ">
           {/* iOS Button */}
-          <button
-            className="flex items-center justify-center gap-2 
-                             bg-white text-primary 
-                             px-6 py-3 rounded-lg  cursor-pointer
-                             font-medium 
-                             transition hover:scale-105 w-full sm:w-auto"
+          <Button
+            icon={<Download size={18} />}
+            bgColor="bg-white"
+            textColor="text-primary"
+            borderColor="border-transparent"
           >
-            <Download size={18} />
             Download on iOS
-          </button>
+          </Button>
 
           {/* Android Coming Soon */}
           <button
