@@ -19,13 +19,13 @@ export default function Footer() {
 
         {/* Center - Links */}
         <div className="flex gap-6 text-gray-400">
-          <Link href="#about" className="hover:text-white transition">
+          <Link href="https://salahslab.com/" className="hover:text-white transition">
             About
           </Link>
-          <Link href="#privacy" className="hover:text-white transition">
+          <Link href="/privacy" className="hover:text-white transition">
             Privacy
           </Link>
-          <Link href="#terms" className="hover:text-white transition">
+          <Link href="/terms" className="hover:text-white transition">
             Terms
           </Link>
         </div>
