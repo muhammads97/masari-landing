@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 
 type Props = {
@@ -6,17 +8,31 @@ type Props = {
 };
 
 export default function NavLinks({ isMobile, onClick }: Props) {
+  const handleClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    id: string
+  ) => {
+    e.preventDefault();
+
+    const section = document.getElementById(id);
+    section?.scrollIntoView({ behavior: "smooth" });
+
+    onClick?.(); 
+  };
+
+  const links = [
+    { label: "Features", id: "features" },
+    { label: "How It Works", id: "howItWorks" },
+    { label: "Download", id: "download" },
+  ];
+
   return (
     <>
-      {[
-        { label: "Features", href: "#features" },
-        { label: "How It Works", href: "#howItWorks" },
-        { label: "Download", href: "#download" },
-      ].map((link) => (
+      {links.map((link) => (
         <Link
-          key={link.href}
-          href={link.href}
-          onClick={onClick}
+          key={link.id}
+          href={`#${link.id}`}
+          onClick={(e) => handleClick(e, link.id)}
           className={`${
             isMobile ? "block" : ""
           } text-secondaryText hover:text-primary transition`}

@@ -1,8 +1,12 @@
 import DownloadSection from "./components/sections/DownloadSection";
+import FeaturesSection from "./components/sections/Features/FeaturesSection";
 
 export default function Home() {
   return (
-    <DownloadSection />
+    <>
+      <FeaturesSection />
+      <DownloadSection />
+    </>
     // <main className="centered-page">
     //   <div className="card">
     //     <div className="badge">Beta Launch Soon</div>
