@@ -5,7 +5,7 @@ import Button from "../ui/Button";
 
 export default function Hero() {
   return (
-    <section className="bg-white pt-32 pb-20">
+    <section className="bg-background pt-32 pb-20">
       <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
         {/* Left Content */}
         <div className="text-center lg:text-left">
