@@ -14,8 +14,22 @@
   --mutedText: #94a3b8;
   --borderLight: #e2e8f0;
   --borderGreen: #cfede3;
+  --hoverGreen: #249b70;
 }
 
+@theme {
+  --color-primary:  #1e7f5c;
+  --color-primaryLight: #e6f4ef;
+  --color-accentGreen: #2fbf71;
+  --color-white: #ffffff;
+  --color-background: #f8faf9;
+  --color-primaryText: #0f172a;
+  --color-secondaryText: #475569;
+  --color-mutedText: #94a3b8;
+  --color-borderLight: #e2e8f0;
+  --color-borderGreen: #cfede3;
+  --color-hoverGreen: #249b70;
+}
 /* =========================
    Base reset
 ========================= */
@@ -76,7 +90,7 @@ h2 {
 p {
   line-height: 1.6;
   color: var(--secondaryText);
-  margin-bottom: 28px;
+  margin: 0;
 }
 
 /* =========================
