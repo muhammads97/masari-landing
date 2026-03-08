@@ -1,27 +1,30 @@
+import DownloadSection from "./components/sections/DownloadSection";
+
 export default function Home() {
   return (
-    <main className="centered-page">
-      <div className="card">
-        <div className="badge">Beta Launch Soon</div>
+    <DownloadSection />
+    // <main className="centered-page">
+    //   <div className="card">
+    //     <div className="badge">Beta Launch Soon</div>
 
-        <h1>Masari</h1>
-        <h2>AI-powered expense tracking</h2>
+    //     <h1>Masari</h1>
+    //     <h2>AI-powered expense tracking</h2>
 
-        <p>
-          Capture expenses effortlessly and understand your money with clarity.
-          Masari is built for simplicity, automation, and shared financial
-          visibility.
-        </p>
+    //     <p>
+    //       Capture expenses effortlessly and understand your money with clarity.
+    //       Masari is built for simplicity, automation, and shared financial
+    //       visibility.
+    //     </p>
 
-        <a className="btn" href="#">
-          Join Beta Soon
-        </a>
+    //     <a className="btn" href="#">
+    //       Join Beta Soon
+    //     </a>
 
-        <div className="links">
-          <a href="/terms">Terms</a>
-          <a href="/privacy">Privacy</a>
-        </div>
-      </div>
-    </main>
+    //     <div className="links">
+    //       <a href="/terms">Terms</a>
+    //       <a href="/privacy">Privacy</a>
+    //     </div>
+    //   </div>
+    // </main>
   );
 }

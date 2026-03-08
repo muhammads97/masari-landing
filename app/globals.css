@@ -77,20 +77,16 @@ body {
 h1 {
   margin: 0;
   font-size: 2.4rem;
-  color: var(--primary);
   letter-spacing: -0.5px;
 }
 
 h2 {
   margin: 10px 0 25px;
   font-weight: 500;
-  color: var(--secondaryText);
 }
 
 p {
   line-height: 1.6;
-  color: var(--secondaryText);
-  margin: 0;
 }
 
 /* =========================

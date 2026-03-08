@@ -6,6 +6,7 @@ import Image from "next/image";
 import logo from "@/public/logo.svg";
 import NavLinks from "./NavLinks";
 import MobileMenu from "./MobileMenu";
+import { Menu } from "lucide-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,7 +35,7 @@ export default function Navbar() {
           onClick={() => setIsOpen(!isOpen)}
           className="md:hidden w-11 h-11 text-xl  flex items-center justify-center rounded-lg border border-secondaryText/40 text-primary transition-all duration-300 hover:bg-primary hover:text-white active:scale-95"
         >
-          ☰
+           <Menu />
         </button>
       </div>
 
