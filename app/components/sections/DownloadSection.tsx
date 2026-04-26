@@ -2,7 +2,7 @@ import { Download, Clock } from "lucide-react";
 
 export default function DownloadSection() {
   return (
-    <section className="bg-primary text-white py-16 md:py-20">
+    <section id="download" className="bg-primary text-white py-16 md:py-20">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center flex flex-col justify-center items-center">
         {/* Title */}
         <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
