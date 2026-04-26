@@ -1,12 +1,14 @@
 import DownloadSection from "./components/sections/DownloadSection";
 import FeaturesSection from "./components/sections/Features/FeaturesSection";
 import Hero from "./components/sections/Hero";
+import TestimonialsSection from "./components/sections/Testimonials/TestimonialsSection";
 
 export default function Home() {
   return (
     <>
       <Hero />
       <FeaturesSection />
+      <TestimonialsSection />
       <DownloadSection />
     </>
     // <main className="centered-page">
