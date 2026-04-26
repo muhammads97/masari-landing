@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import logo from "@/public/logo.svg";
+import logo from "@/public/images/logo.svg"
 import NavLinks from "./NavLinks";
 import MobileMenu from "./MobileMenu";
 import { Menu } from "lucide-react";
@@ -14,7 +14,6 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 w-full bg-white shadow-sm z-50">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        
         <Link href="/" className="flex items-center gap-2 text-primary">
           <Image src={logo} alt="Logo" width={38} height={38} />
           <span className="font-bold text-2xl">MASARI</span>
@@ -35,7 +34,7 @@ export default function Navbar() {
           onClick={() => setIsOpen(!isOpen)}
           className="md:hidden w-11 h-11 text-xl  flex items-center justify-center rounded-lg border border-secondaryText/40 text-primary transition-all duration-300 hover:bg-primary hover:text-white active:scale-95"
         >
-           <Menu />
+          <Menu />
         </button>
       </div>
 
