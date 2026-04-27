@@ -1,0 +1,7 @@
+name = "masari-landing"
+pages_build_output_dir = "out"
+compatibility_date = "2024-01-01"
+
+[[kv_namespaces]]
+binding = "WAITLIST"
+id = "0d04e73e529b4001aad76962ba5d8991"
