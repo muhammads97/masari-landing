@@ -30,6 +30,13 @@ export async function onRequestPost({ request, env }: PagesContext) {
       });
     }
 
+    if (!env.WAITLIST) {
+      return new Response(JSON.stringify({ error: "KV binding not configured" }), {
+        status: 503,
+        headers,
+      });
+    }
+
     const key = email.toLowerCase().trim();
     await env.WAITLIST.put(key, new Date().toISOString());
 
