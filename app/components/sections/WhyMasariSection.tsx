@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Check, CircleCheckBig } from "lucide-react";
+import { CircleCheckBig } from "lucide-react";
 import whyImage from "@/public/images/hero.png";
 
 const benefits = [

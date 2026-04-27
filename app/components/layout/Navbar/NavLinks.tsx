@@ -15,12 +15,10 @@ export default function NavLinks({ isMobile, onClick }: Props) {
     id: string
   ) => {
     if (pathname === "/") {
-      // We are on home → smooth scroll
       e.preventDefault();
       const section = document.getElementById(id);
       section?.scrollIntoView({ behavior: "smooth" });
     } else {
-      // Not on home → go to home + section
       e.preventDefault();
       router.push(`/#${id}`);
     }
@@ -29,7 +27,6 @@ export default function NavLinks({ isMobile, onClick }: Props) {
   };
 
   const links = [
-    { label: "Home", id: "/" },
     { label: "Features", id: "features" },
     { label: "How It Works", id: "howItWorks" },
     { label: "Why Masari", id: "whyMasari" },
