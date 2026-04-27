@@ -30,7 +30,6 @@ export default function NavLinks({ isMobile, onClick }: Props) {
     { label: "Features", id: "features" },
     { label: "How It Works", id: "howItWorks" },
     { label: "Why Masari", id: "whyMasari" },
-    { label: "Testimonials", id: "testimonials" },
     { label: "Download", id: "download" },
   ];
 

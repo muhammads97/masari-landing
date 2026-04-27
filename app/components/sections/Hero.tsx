@@ -1,7 +1,8 @@
 import Image from "next/image";
-import { Download } from "lucide-react";
+// import { Download } from "lucide-react";
 import heroImage from "@/public/images/hero.png";
-import Button from "../ui/Button";
+// import Button from "../ui/Button";
+import EmailForm from "../ui/EmailForm";
 
 export default function Hero() {
   return (
@@ -22,17 +23,16 @@ export default function Hero() {
             Masari brings intelligent financial management to your fingertips.
           </p>
 
-          {/* CTA Button */}
-          <div className="flex justify-center lg:justify-start">
-            <Button
+          {/* CTA */}
+          {/* <Button
               icon={<Download size={18} />}
               bgColor="bg-primary"
               textColor="text-white"
               borderColor="border-transparent"
             >
               Download Now on iOS
-            </Button>
-          </div>
+            </Button> */}
+          <EmailForm />
         </div>
 
         {/* Right Image */}
