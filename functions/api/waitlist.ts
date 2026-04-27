@@ -1,10 +1,20 @@
+interface KVNamespace {
+  get(key: string): Promise<string | null>;
+  put(key: string, value: string): Promise<void>;
+}
+
 interface Env {
   WAITLIST: KVNamespace;
 }
 
+interface PagesContext {
+  request: Request;
+  env: Env;
+}
+
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
+export async function onRequestPost({ request, env }: PagesContext) {
   const headers = {
     "Access-Control-Allow-Origin": "*",
     "Content-Type": "application/json",
