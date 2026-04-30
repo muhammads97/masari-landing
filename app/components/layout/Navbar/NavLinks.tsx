@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
+import { translations, getLocaleFromPath } from "@/app/i18n/translations";
 
 type Props = {
   isMobile?: boolean;
@@ -9,36 +12,38 @@ type Props = {
 export default function NavLinks({ isMobile, onClick }: Props) {
   const pathname = usePathname();
   const router = useRouter();
+  const locale = getLocaleFromPath(pathname);
+  const t = translations[locale].navbar;
+
+  const links = [
+    { label: t.features, id: "features" },
+    { label: t.howItWorks, id: "howItWorks" },
+    { label: t.whyMasari, id: "whyMasari" },
+    { label: t.download, id: "download" },
+  ];
 
   const handleClick = (
     e: React.MouseEvent<HTMLAnchorElement>,
     id: string
   ) => {
-    if (pathname === "/") {
+    const isLandingPage = pathname === '/en' || pathname === '/ja' || pathname === '/';
+    if (isLandingPage) {
       e.preventDefault();
       const section = document.getElementById(id);
       section?.scrollIntoView({ behavior: "smooth" });
     } else {
       e.preventDefault();
-      router.push(`/#${id}`);
+      router.push(`/${locale}#${id}`);
     }
-
     onClick?.();
   };
-
-  const links = [
-    { label: "Features", id: "features" },
-    { label: "How It Works", id: "howItWorks" },
-    { label: "Why Masari", id: "whyMasari" },
-    { label: "Download", id: "download" },
-  ];
 
   return (
     <>
       {links.map((link) => (
         <Link
           key={link.id}
-          href={`/#${link.id}`}
+          href={`/${locale}#${link.id}`}
           onClick={(e) => handleClick(e, link.id)}
           className={`${
             isMobile ? "block" : ""

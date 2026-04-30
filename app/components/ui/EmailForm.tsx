@@ -1,12 +1,14 @@
 "use client";
 
 import { useState } from "react";
+import { Translations } from "@/app/i18n/translations";
 
 type Props = {
   dark?: boolean;
+  t: Translations['emailForm'];
 };
 
-export default function EmailForm({ dark = false }: Props) {
+export default function EmailForm({ dark = false, t }: Props) {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
@@ -35,7 +37,7 @@ export default function EmailForm({ dark = false }: Props) {
   if (status === "success") {
     return (
       <p className={`font-medium text-lg ${dark ? "text-white" : "text-primary"}`}>
-        You&apos;re on the list! We&apos;ll notify you when Masari launches.
+        {t.success}
       </p>
     );
   }
@@ -47,7 +49,7 @@ export default function EmailForm({ dark = false }: Props) {
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          placeholder="your@email.com"
+          placeholder={t.placeholder}
           required
           className={`flex-1 px-4 py-3 rounded-lg border text-primaryText placeholder:text-mutedText focus:outline-none focus:ring-2 focus:ring-primary ${
             dark ? "bg-white/90 border-transparent" : "bg-white border-borderLight"
@@ -62,12 +64,12 @@ export default function EmailForm({ dark = false }: Props) {
               : "bg-primary text-white hover:bg-hoverGreen"
           }`}
         >
-          {status === "loading" ? "Joining..." : "Get Early Access"}
+          {status === "loading" ? t.loading : t.button}
         </button>
       </form>
       {status === "error" && (
         <p className={`text-sm mt-2 ${dark ? "text-white/80" : "text-red-500"}`}>
-          Something went wrong. Please try again.
+          {t.error}
         </p>
       )}
     </div>

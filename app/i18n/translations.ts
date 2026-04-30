@@ -1,0 +1,254 @@
+export type Locale = 'en' | 'ja';
+export const locales: Locale[] = ['en', 'ja'];
+
+export function getLocaleFromPath(pathname: string): Locale {
+  if (pathname.startsWith('/ja')) return 'ja';
+  return 'en';
+}
+
+export interface Translations {
+  navbar: {
+    features: string;
+    howItWorks: string;
+    whyMasari: string;
+    download: string;
+    getStarted: string;
+  };
+  hero: {
+    heading1: string;
+    heading2: string;
+    heading3: string;
+    description: string;
+  };
+  features: {
+    heading: string;
+    subheading: string;
+    items: Array<{ title: string; description: string }>;
+  };
+  howItWorks: {
+    heading: string;
+    subheading: string;
+    steps: Array<{ title: string; description: string }>;
+  };
+  whyMasari: {
+    heading: string;
+    subheading: string;
+    withoutLabel: string;
+    withLabel: string;
+    rows: Array<{ without: string; with: string; icon: string }>;
+  };
+  download: {
+    heading: string;
+    description: string;
+    androidSoon: string;
+    freeNote: string;
+  };
+  emailForm: {
+    placeholder: string;
+    button: string;
+    loading: string;
+    success: string;
+    error: string;
+  };
+}
+
+export const translations: Record<Locale, Translations> = {
+  en: {
+    navbar: {
+      features: 'Features',
+      howItWorks: 'How It Works',
+      whyMasari: 'Why Masari',
+      download: 'Download',
+      getStarted: 'Get Started',
+    },
+    hero: {
+      heading1: 'AI-Powered',
+      heading2: 'Expense Tracking',
+      heading3: 'Made Simple',
+      description:
+        'Chat with AI, snap receipts, and track your expenses effortlessly. Masari brings intelligent financial management to your fingertips.',
+    },
+    features: {
+      heading: 'All your accounting in one place',
+      subheading:
+        'Masari combines cutting-edge AI technology with intuitive design to revolutionize how you manage your expenses.',
+      items: [
+        {
+          title: 'Snap & Forget',
+          description:
+            'Point your camera at any receipt. Masari reads it, extracts every item, and logs it instantly. No typing, no categories to pick.',
+        },
+        {
+          title: 'Just Text It',
+          description:
+            'No receipt? No problem. Type what you spent — in any language — and Masari handles the rest.',
+        },
+        {
+          title: 'Ask Your Money Anything',
+          description:
+            '"What did I spend last week?" "Can I afford that watch?" "Where did ¥50,000 go?" Real answers, instantly, in plain language.',
+        },
+        {
+          title: 'Reports That Actually Make Sense',
+          description:
+            'Spending by category, by merchant, by week. Masari surfaces what matters without you having to build a single spreadsheet.',
+        },
+        {
+          title: 'Every Yen, Accounted For',
+          description:
+            'A clean, searchable log of every expense — no AI required. Filter by date, merchant, or category whenever you need the raw data.',
+        },
+      ],
+    },
+    howItWorks: {
+      heading: 'How Masari Works',
+      subheading: 'Two simple steps to smarter expense management',
+      steps: [
+        {
+          title: 'Capture Expenses',
+          description: 'You take a photo — or just type a quick message.',
+        },
+        {
+          title: 'Ask anything, see everything',
+          description: 'Query your spending, spot patterns, ask for reports.',
+        },
+      ],
+    },
+    whyMasari: {
+      heading: 'Why Masari?',
+      subheading: 'Minimize lost expenses, increase financial awareness.',
+      withoutLabel: 'Without Masari',
+      withLabel: 'With Masari',
+      rows: [
+        {
+          without: 'Type every expense manually',
+          with: 'Snap a receipt or just send a message',
+          icon: '📷',
+        },
+        {
+          without: 'Dig through spreadsheets to find answers',
+          with: 'Ask questions in any language, get instant answers',
+          icon: '💬',
+        },
+        {
+          without: 'Guess if you can afford something',
+          with: 'Know instantly, based on your real spending data',
+          icon: '📊',
+        },
+      ],
+    },
+    download: {
+      heading: 'Ready to Transform Your Finances?',
+      description:
+        "Be among the first to get Masari when it launches on the App Store. Enter your email and we'll notify you the moment it's live.",
+      androidSoon: 'Android Coming Soon',
+      freeNote: 'Free to download • No credit card required',
+    },
+    emailForm: {
+      placeholder: 'your@email.com',
+      button: 'Get Early Access',
+      loading: 'Joining...',
+      success: "You're on the list! We'll notify you when Masari launches.",
+      error: 'Something went wrong. Please try again.',
+    },
+  },
+  ja: {
+    navbar: {
+      features: '機能',
+      howItWorks: '使い方',
+      whyMasari: 'なぜMasari？',
+      download: 'ダウンロード',
+      getStarted: '始める',
+    },
+    hero: {
+      heading1: 'AIで',
+      heading2: '支出管理',
+      heading3: 'をシンプルに',
+      description:
+        'AIとチャットしたり、レシートを撮影するだけで、支出を簡単に記録。Masariはインテリジェントな家計管理をあなたの手のひらに。',
+    },
+    features: {
+      heading: 'すべての会計をひとつに',
+      subheading:
+        'Masariは最先端のAI技術と直感的なデザインを組み合わせ、支出管理を革新します。',
+      items: [
+        {
+          title: '撮るだけでOK',
+          description:
+            'レシートにカメラを向けるだけ。Masariが読み取り、すべての品目を瞬時に記録。入力不要、カテゴリ選択不要。',
+        },
+        {
+          title: 'テキストで送るだけ',
+          description:
+            'レシートがなくても大丈夫。使った金額をどんな言語でも入力するだけで、あとはMasariにお任せ。',
+        },
+        {
+          title: 'お金に何でも聞いて',
+          description:
+            '「先週いくら使った？」「その時計は買える？」「¥50,000はどこへ？」すぐにわかりやすい回答が得られます。',
+        },
+        {
+          title: 'わかりやすいレポート',
+          description:
+            'カテゴリ別、店舗別、週別の支出。スプレッドシートを作らなくても、重要な情報をMasariが提示します。',
+        },
+        {
+          title: '1円もれなく管理',
+          description:
+            'すべての支出をきれいに検索可能なリストで管理。AIが不要なときは、日付・店舗・カテゴリでフィルタリング。',
+        },
+      ],
+    },
+    howItWorks: {
+      heading: 'Masariの使い方',
+      subheading: '2つの簡単なステップでスマートな支出管理を',
+      steps: [
+        {
+          title: '支出を記録',
+          description: '写真を撮るか、メッセージを入力するだけ。',
+        },
+        {
+          title: '何でも質問、全部わかる',
+          description: '支出を照会し、パターンを把握し、レポートを依頼。',
+        },
+      ],
+    },
+    whyMasari: {
+      heading: 'なぜMasari？',
+      subheading: '記録漏れを減らし、家計の把握力を高める。',
+      withoutLabel: 'Masariなし',
+      withLabel: 'Masariあり',
+      rows: [
+        {
+          without: '支出をひとつひとつ手入力',
+          with: 'レシートを撮るかメッセージを送るだけ',
+          icon: '📷',
+        },
+        {
+          without: 'スプレッドシートを掘り返して答えを探す',
+          with: 'どんな言語でも質問でき、すぐに回答が得られる',
+          icon: '💬',
+        },
+        {
+          without: '何かを買えるか感覚で判断',
+          with: '実際の支出データに基づき即座に把握',
+          icon: '📊',
+        },
+      ],
+    },
+    download: {
+      heading: '家計を変える準備はできていますか？',
+      description:
+        'App Storeでのリリース時にいち早く通知を受け取りましょう。メールアドレスを入力すれば、公開直後にお知らせします。',
+      androidSoon: 'Android版 近日公開',
+      freeNote: '無料でダウンロード • クレジットカード不要',
+    },
+    emailForm: {
+      placeholder: 'your@email.com',
+      button: '早期アクセスを取得',
+      loading: '登録中...',
+      success: 'リストに追加されました！Masariのリリース時にお知らせします。',
+      error: 'エラーが発生しました。もう一度お試しください。',
+    },
+  },
+};

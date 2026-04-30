@@ -1,19 +1,19 @@
-import DownloadSection from "./components/sections/DownloadSection";
-import FeaturesSection from "./components/sections/Features/FeaturesSection";
-import Hero from "./components/sections/Hero";
-import HowItWorksSection from "./components/sections/HowItWorks/HowItWorksSection";
-// import TestimonialsSection from "./components/sections/Testimonials/TestimonialsSection";
-import WhyMasariSection from "./components/sections/WhyMasariSection";
+'use client';
+
+import { useEffect } from 'react';
 
 export default function Home() {
-  return (
-    <>
-      <Hero />
-      <FeaturesSection />
-      <HowItWorksSection />
-      <WhyMasariSection />
-      {/* <TestimonialsSection /> */}
-      <DownloadSection />
-    </>
-  );
+  useEffect(() => {
+    const stored =
+      typeof localStorage !== 'undefined'
+        ? localStorage.getItem('masari-locale')
+        : null;
+    const detected = navigator.language.toLowerCase().startsWith('ja')
+      ? 'ja'
+      : 'en';
+    const lang = stored === 'en' || stored === 'ja' ? stored : detected;
+    window.location.replace(`/${lang}`);
+  }, []);
+
+  return null;
 }

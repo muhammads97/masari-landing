@@ -1,52 +1,37 @@
 import HowItWorksCard from "./HowItWorksCard";
+import { Translations } from "@/app/i18n/translations";
 
-import step1 from "@/public/images/hero.png";
-import step2 from "@/public/images/hero.png";
-import step3 from "@/public/images/hero.png";
+import step1 from "@/public/images/step1.png";
+import step2 from "@/public/images/step2.png";
 
-const steps = [
-  {
-    step: 1,
-    image: step1,
-    title: "Capture Receipts",
-    description: "Take a photo of your receipt and let AI do the rest.",
-  },
-  {
-    step: 2,
-    image: step2,
-    title: "AI Processing",
-    description: "Our AI extracts and categorizes all transaction details instantly.",
-  },
-  {
-    step: 3,
-    image: step3,
-    title: "Track & Analyze",
-    description: "Monitor spending trends and receive smart financial insights.",
-  },
-];
+const images = [step1, step2];
 
-export default function HowItWorksSection() {
+type Props = {
+  t: Translations['howItWorks'];
+};
+
+export default function HowItWorksSection({ t }: Props) {
   return (
     <section id="howItWorks" className="bg-background py-20">
       <div className="max-w-6xl mx-auto px-6 text-center">
-        
-        {/* Heading */}
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-5">
-          How Masari Works
+          {t.heading}
         </h2>
-
-        {/* Paragraph */}
         <p className="text-secondaryText text-base sm:text-lg mx-auto mb-14 leading-relaxed">
-          Three simple steps to smarter expense management
+          {t.subheading}
         </p>
 
-        {/* Cards */}
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {steps.map((item) => (
-            <HowItWorksCard key={item.step} {...item} />
+        <div className="grid gap-8 sm:grid-cols-2 max-w-6xl mx-auto">
+          {t.steps.map((step, i) => (
+            <HowItWorksCard
+              key={step.title}
+              step={i + 1}
+              image={images[i]}
+              title={step.title}
+              description={step.description}
+            />
           ))}
         </div>
-
       </div>
     </section>
   );
