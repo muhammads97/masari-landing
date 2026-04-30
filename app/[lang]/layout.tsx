@@ -9,8 +9,8 @@ export function generateStaticParams() {
 const SITE_URL = 'https://masari.salahslab.com';
 
 const titles: Record<Locale, string> = {
-  en: 'Masari – AI-Powered Expense Tracking',
-  ja: 'Masari – AIで支出管理をシンプルに',
+  en: 'AI-Powered Expense Tracking',
+  ja: 'AIで支出管理をシンプルに',
 };
 
 const descriptions: Record<Locale, string> = {
