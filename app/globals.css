@@ -14,8 +14,22 @@
   --mutedText: #94a3b8;
   --borderLight: #e2e8f0;
   --borderGreen: #cfede3;
+  --hoverGreen: #249b70;
 }
 
+@theme {
+  --color-primary:  #1e7f5c;
+  --color-primaryLight: #e6f4ef;
+  --color-accentGreen: #2fbf71;
+  --color-white: #ffffff;
+  --color-background: #f8faf9;
+  --color-primaryText: #0f172a;
+  --color-secondaryText: #475569;
+  --color-mutedText: #94a3b8;
+  --color-borderLight: #e2e8f0;
+  --color-borderGreen: #cfede3;
+  --color-hoverGreen: #249b70;
+}
 /* =========================
    Base reset
 ========================= */
@@ -31,96 +45,6 @@ body {
     -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   background: var(--background);
   color: var(--primaryText);
-}
-
-/* =========================
-   Landing layout
-========================= */
-.centered-page {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  text-align: center;
-}
-
-/* =========================
-   Card
-========================= */
-.card {
-  max-width: 640px;
-  background: var(--white);
-  border: 1px solid var(--borderLight);
-  border-radius: 14px;
-  padding: 48px 36px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
-}
-
-/* =========================
-   Typography
-========================= */
-h1 {
-  margin: 0;
-  font-size: 2.4rem;
-  color: var(--primary);
-  letter-spacing: -0.5px;
-}
-
-h2 {
-  margin: 10px 0 25px;
-  font-weight: 500;
-  color: var(--secondaryText);
-}
-
-p {
-  line-height: 1.6;
-  color: var(--secondaryText);
-  margin-bottom: 28px;
-}
-
-/* =========================
-   Components
-========================= */
-.badge {
-  display: inline-block;
-  background: var(--primaryLight);
-  color: var(--primary);
-  padding: 6px 14px;
-  border-radius: 999px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  margin-bottom: 18px;
-}
-
-.btn {
-  background: var(--primary);
-  color: white;
-  padding: 12px 24px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: 0.2s ease;
-  display: inline-block;
-}
-
-.btn:hover {
-  background: #17684c;
-}
-
-.links {
-  margin-top: 36px;
-  font-size: 0.9rem;
-}
-
-.links a {
-  color: var(--mutedText);
-  text-decoration: none;
-  margin: 0 12px;
-}
-
-.links a:hover {
-  color: var(--primary);
 }
 
 /* =========================

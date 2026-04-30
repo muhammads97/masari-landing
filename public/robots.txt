@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://masari.salahslab.com/sitemap.xml
