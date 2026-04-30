@@ -1,19 +1,12 @@
-'use client';
+import type { Metadata } from 'next';
+import RootRedirect from './components/RootRedirect';
 
-import { useEffect } from 'react';
+export const metadata: Metadata = {
+  alternates: {
+    canonical: 'https://masari.salahslab.com/en',
+  },
+};
 
 export default function Home() {
-  useEffect(() => {
-    const stored =
-      typeof localStorage !== 'undefined'
-        ? localStorage.getItem('masari-locale')
-        : null;
-    const detected = navigator.language.toLowerCase().startsWith('ja')
-      ? 'ja'
-      : 'en';
-    const lang = stored === 'en' || stored === 'ja' ? stored : detected;
-    window.location.replace(`/${lang}`);
-  }, []);
-
-  return null;
+  return <RootRedirect />;
 }
