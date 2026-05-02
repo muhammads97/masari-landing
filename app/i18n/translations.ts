@@ -11,6 +11,7 @@ export interface Translations {
     features: string;
     howItWorks: string;
     whyMasari: string;
+    support: string;
     download: string;
     getStarted: string;
   };
@@ -37,6 +38,13 @@ export interface Translations {
     withLabel: string;
     rows: Array<{ without: string; with: string; icon: string }>;
   };
+  support: {
+    heading: string;
+    description: string;
+    email: string;
+    faqsLabel: string;
+    faqs: Array<{ question: string; answer: string }>;
+  };
   download: {
     heading: string;
     description: string;
@@ -58,6 +66,7 @@ export const translations: Record<Locale, Translations> = {
       features: 'Features',
       howItWorks: 'How It Works',
       whyMasari: 'Why Masari',
+      support: 'Support',
       download: 'Download',
       getStarted: 'Get Started',
     },
@@ -137,6 +146,29 @@ export const translations: Record<Locale, Translations> = {
         },
       ],
     },
+    support: {
+      heading: 'Need help?',
+      description: 'Have a question or want to get in touch? Reach us at',
+      email: 'masari@salahslab.com',
+      faqsLabel: 'Frequently Asked Questions',
+      faqs: [
+        {
+          question: 'How do I record an expense?',
+          answer:
+            'You can record an expense in two ways: by scanning a receipt with your camera, or by entering the details manually via text input. Masari only records what\'s available — if a detail like location isn\'t found on the receipt or provided in your input, it will be saved as unknown rather than guessed.',
+        },
+        {
+          question: 'What kind of questions can Masari answer?',
+          answer:
+            'You can ask Masari anything about your spending — for example: "How much did I spend on food this month?", "What was my biggest expense last week?", or "Show me all my transportation costs in April." Masari answers based on your actual recorded expenses, so the more you log, the more useful its insights become.',
+        },
+        {
+          question: 'How do I edit or delete an expense?',
+          answer:
+            'Open the expense list screen and select the month in which the expense was recorded. Tap the expense you want to change, update the details, and tap Save. To delete it, tap the trash icon on the expense.',
+        },
+      ],
+    },
     download: {
       heading: 'Ready to Transform Your Finances?',
       description:
@@ -157,6 +189,7 @@ export const translations: Record<Locale, Translations> = {
       features: '機能',
       howItWorks: '使い方',
       whyMasari: 'なぜMasari？',
+      support: 'サポート',
       download: 'ダウンロード',
       getStarted: '始める',
     },
@@ -233,6 +266,29 @@ export const translations: Record<Locale, Translations> = {
           without: '何かを買えるか感覚で判断',
           with: '実際の支出データに基づき即座に把握',
           icon: '📊',
+        },
+      ],
+    },
+    support: {
+      heading: 'お困りですか？',
+      description: 'ご質問やお問い合わせはこちらまで',
+      email: 'masari@salahslab.com',
+      faqsLabel: 'よくある質問',
+      faqs: [
+        {
+          question: '支出はどのように記録しますか？',
+          answer:
+            '支出を記録する方法は2つあります。カメラでレシートをスキャンするか、テキスト入力で手動入力するかです。Masariは利用可能な情報のみを記録します。たとえば、レシートに場所の情報がなく、入力でも提供されていない場合、推測せずに「不明」として保存されます。',
+        },
+        {
+          question: 'Masariはどんな質問に答えられますか？',
+          answer:
+            '支出に関するあらゆる質問ができます。たとえば「今月、食費にいくら使いましたか？」「先週の最大の支出は？」「4月の交通費をすべて見せて」などです。Masariは実際に記録された支出に基づいて回答するため、記録が多いほど有益なインサイトが得られます。',
+        },
+        {
+          question: '支出を編集・削除するには？',
+          answer:
+            '支出リスト画面を開き、対象の支出が記録された月を選択します。変更したい支出をタップし、内容を更新して「保存」をタップします。削除する場合は、支出のゴミ箱アイコンをタップしてください。',
         },
       ],
     },

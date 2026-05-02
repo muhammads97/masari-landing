@@ -19,6 +19,7 @@ export default function NavLinks({ isMobile, onClick }: Props) {
     { label: t.features, id: "features" },
     { label: t.howItWorks, id: "howItWorks" },
     { label: t.whyMasari, id: "whyMasari" },
+    { label: t.support, id: "support" },
     { label: t.download, id: "download" },
   ];
 
