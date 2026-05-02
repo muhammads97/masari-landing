@@ -6,11 +6,11 @@ import Footer from "./components/layout/Footer";
 export const metadata: Metadata = {
   metadataBase: new URL("https://masari.salahslab.com"),
   title: {
-    default: "Masari – AI-Powered Expense Tracking",
+    default: "Masari App – AI Expense Tracker | Snap Receipts & Chat with AI",
     template: "%s | Masari",
   },
   description:
-    "Chat with AI, snap receipts, and track expenses effortlessly. Masari brings intelligent financial management to your fingertips.",
+    "Masari is the AI expense tracker app that lets you log spending by snapping receipts or chatting in plain language. Ask Masari anything about your finances and get instant answers.",
   icons: {
     icon: [
       { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
