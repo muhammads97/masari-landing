@@ -12,8 +12,12 @@ export const metadata: Metadata = {
   description:
     "Chat with AI, snap receipts, and track expenses effortlessly. Masari brings intelligent financial management to your fingertips.",
   icons: {
-    icon: "/images/logo.svg",
-    apple: "/images/logo.svg",
+    icon: [
+      { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/images/logo-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/images/logo-512.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: "/images/logo-192.png",
   },
 };
 
