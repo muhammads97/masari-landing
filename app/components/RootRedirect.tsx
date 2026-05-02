@@ -12,7 +12,7 @@ export default function RootRedirect() {
       ? 'ja'
       : 'en';
     const lang = stored === 'en' || stored === 'ja' ? stored : detected;
-    window.location.replace(`/${lang}`);
+    window.location.replace(`/${lang}${window.location.hash}`);
   }, []);
 
   return null;
