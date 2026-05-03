@@ -48,7 +48,9 @@ export interface Translations {
   download: {
     heading: string;
     description: string;
-    androidSoon: string;
+    iosButton: string;
+    androidWaitlistHeading: string;
+    androidWaitlistDescription: string;
     freeNote: string;
   };
   emailForm: {
@@ -172,15 +174,17 @@ export const translations: Record<Locale, Translations> = {
     download: {
       heading: 'Ready to Transform Your Finances?',
       description:
-        "Be among the first to get Masari when it launches on the App Store. Enter your email and we'll notify you the moment it's live.",
-      androidSoon: 'Android Coming Soon',
+        'Masari is now available on the App Store. Download it free today.',
+      iosButton: 'Download on the App Store',
+      androidWaitlistHeading: 'Android Coming Soon',
+      androidWaitlistDescription: "Join the waitlist and we'll notify you the moment Masari launches on Android.",
       freeNote: 'Free to download • No credit card required',
     },
     emailForm: {
       placeholder: 'your@email.com',
-      button: 'Get Early Access',
+      button: 'Join Android Waitlist',
       loading: 'Joining...',
-      success: "You're on the list! We'll notify you when Masari launches.",
+      success: "You're on the list! We'll notify you when Masari launches on Android.",
       error: 'Something went wrong. Please try again.',
     },
   },
@@ -295,15 +299,17 @@ export const translations: Record<Locale, Translations> = {
     download: {
       heading: '家計を変える準備はできていますか？',
       description:
-        'App Storeでのリリース時にいち早く通知を受け取りましょう。メールアドレスを入力すれば、公開直後にお知らせします。',
-      androidSoon: 'Android版 近日公開',
+        'MasariはApp Storeで今すぐ無料ダウンロードできます。',
+      iosButton: 'App Storeでダウンロード',
+      androidWaitlistHeading: 'Android版 近日公開',
+      androidWaitlistDescription: 'ウェイティングリストに登録すれば、Android版リリース時にお知らせします。',
       freeNote: '無料でダウンロード • クレジットカード不要',
     },
     emailForm: {
       placeholder: 'your@email.com',
-      button: '早期アクセスを取得',
+      button: 'Androidウェイティングリストに登録',
       loading: '登録中...',
-      success: 'リストに追加されました！Masariのリリース時にお知らせします。',
+      success: 'リストに追加されました！Android版リリース時にお知らせします。',
       error: 'エラーが発生しました。もう一度お試しください。',
     },
   },

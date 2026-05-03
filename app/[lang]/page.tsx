@@ -17,7 +17,7 @@ export default async function LocalizedPage({
 
   return (
     <>
-      <Hero t={t.hero} emailForm={t.emailForm} />
+      <Hero t={t.hero} emailForm={t.emailForm} download={t.download} />
       <FeaturesSection t={t.features} />
       <HowItWorksSection t={t.howItWorks} />
       <WhyMasariSection t={t.whyMasari} />
